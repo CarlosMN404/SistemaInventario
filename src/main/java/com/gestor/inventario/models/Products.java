@@ -14,13 +14,13 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = true)
     private String name;
 
-    @Column(name = "price")
+    @Column(name = "price", nullable = true)
     private double price;
 
-    @Column(name = "date")
+    @Column(name = "date", nullable = true)
     private LocalDate date;
 }
 

@@ -42,21 +42,9 @@ public class ProductsServiceImpl implements ProductService {
             producto.setName(products.getName());
             producto.setPrice(products.getPrice());
             return productsRepository.save(producto);
-        }).orElseGet(()->{
-            return productsRepository.save(products);
-        });
+        }).orElseGet(()->productsRepository.save(products));
 
-/*        Optional<Products> p = productsRepository.findById(id);
-        if (!p.isEmpty()){
-            Products pro = p.get();
-            pro.setName(products.getName());
-            pro.setPrice(products.getPrice());
-            return productsRepository.save(pro);
-        }else {
-            return productsRepository.save(products);
-        }*/
-        return productsRepository.save(products);
-
+        return existProduct;
     }
 
     public void deleteProduct(Long id){

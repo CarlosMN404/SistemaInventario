@@ -2,7 +2,6 @@ package com.gestor.inventario.controllers;
 
 import com.gestor.inventario.models.Products;
 import com.gestor.inventario.services.ProductService;
-import com.gestor.inventario.services.impl.ProductsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
