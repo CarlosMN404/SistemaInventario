@@ -41,6 +41,7 @@ public class ProductsServiceImpl implements ProductService {
         Products existProduct = productsRepository.findById(id).map(producto->{
             producto.setName(products.getName());
             producto.setPrice(products.getPrice());
+            producto.setCategory(products.getCategory());
             return productsRepository.save(producto);
         }).orElseGet(()->productsRepository.save(products));
 

@@ -22,5 +22,9 @@ public class Products {
 
     @Column(name = "date", nullable = true)
     private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name = "idCategory")
+    private Categories category;
 }
 
